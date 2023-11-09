@@ -1,0 +1,22 @@
+import CartItems from "./CartItems";
+
+type CartProps = {
+  onClose: () => void
+}
+
+export default function Cart ({onClose}: CartProps) {
+
+  return (
+    <>
+      <div className="cart-backdrop"/>
+      <dialog>
+        <h2>Your Cart</h2>
+        <CartItems />
+        <p id="cart-actions">
+          <button onClick={onClose}>Close</button>
+        </p>
+      </dialog>
+    </>,
+    document.getElementById('modal')
+  )
+}

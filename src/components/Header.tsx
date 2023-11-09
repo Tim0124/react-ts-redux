@@ -14,7 +14,7 @@ export default function Header () {
 
   return(
     <>
-    {cartIsVisible && <Cart onClose={handleCloseClick} />}
+      {cartIsVisible && <Cart onClose={handleCloseClick} />}
       <header id="main-header">
         <div id="main-title">
           <img src="logo.png" alt="Elegant model" />

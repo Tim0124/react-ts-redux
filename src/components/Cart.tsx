@@ -1,3 +1,4 @@
+import { createPortal } from "react-dom";
 import CartItems from "./CartItems";
 
 type CartProps = {
@@ -5,8 +6,8 @@ type CartProps = {
 }
 
 export default function Cart ({onClose}: CartProps) {
-
-  return (
+  
+  return createPortal(
     <>
       <div className="cart-backdrop"/>
       <dialog>
@@ -17,6 +18,6 @@ export default function Cart ({onClose}: CartProps) {
         </p>
       </dialog>
     </>,
-    document.getElementById('modal')
+    document.getElementById('modal')!
   )
 }
